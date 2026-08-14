@@ -1,0 +1,11 @@
+Asset type: Website homepage UI concept mockup, desktop 16:9 first screen.
+Primary request: Design the initial interface for a playful Chinese web app called "酒精灵感异常中心".
+Scene/backdrop: A bold beverage website stage with three realistic aluminum cans arranged together in the center, the front can largest and yellow lemon sparkling alcohol, two side cans slightly behind. Comic-book rays in the background, a purple and white checkerboard floor receding in perspective, floating bubbles and sticker badges.
+Subject: Main yellow lemon sparkling can, realistic metallic can texture, black cartoon outline, condensation dots, glossy highlights. The can label says "可疑快乐" and "ABNORMAL JOY" and "LEMON STATIC". Side cans are pink berry and purple grape variants.
+Style/medium: High-energy beverage landing page mockup, 3D product render mixed with thick black comic illustration outlines, playful retro Japanese soda website feeling, modern design portfolio polish, crisp UI.
+Composition/framing: Full browser viewport, top pill navigation bar, slim yellow announcement ticker, huge outlined headline on the left and right like a product launch page. Center cans dominate the page. Bottom center has a rounded button. Leave clear clickable UI areas.
+Lighting/mood: Bright, fizzy, mischievous, daytime neon studio lighting, not dark bar style.
+Color palette: Lemon yellow, clean white, black outlines, bright purple, coral pink, small lime green accents.
+Text (verbatim): "酒精灵感异常中心"; "系统将为你分配一杯可疑快乐"; "点击进入中心"; "可疑快乐"; "ABNORMAL JOY"; "LEMON STATIC"; "今日异常样本"; "FRESH UNKNOWN".
+Constraints: Mobile-friendly design thinking but show desktop first screen. Keep text legible and large. Use original branding only, no real brand logos, no copied Grog logo, no copyrighted characters. Make it feel like a real website screenshot rather than a poster.
+Avoid: Dark nightclub mood, luxury black-gold bar style, minimal corporate SaaS, realistic people, cluttered unreadable text, blurred cans, copied brand marks.
