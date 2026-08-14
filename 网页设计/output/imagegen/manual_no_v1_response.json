@@ -1,0 +1,1 @@
+{"correct_url":"https://heyroute.ai/v1/images/generations","error":{"code":"wrong_image_api_path","correct_url":"https://heyroute.ai/v1/images/generations","message":"请使用 POST https://heyroute.ai/v1/images/generations，而不是 /images/generations (use POST https://heyroute.ai/v1/images/generations instead of /images/generations)","type":"invalid_request_error"}}

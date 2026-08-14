@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="lemon sparkling cocktail glass">
+  <defs>
+    <linearGradient id="glassEdge" x1="245" y1="110" x2="670" y2="1030" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.38"/>
+    </linearGradient>
+    <linearGradient id="drink" x1="300" y1="260" x2="630" y2="930" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8c8"/>
+      <stop offset="0.34" stop-color="#ffd86a"/>
+      <stop offset="0.68" stop-color="#ff9ac0"/>
+      <stop offset="1" stop-color="#9fdcff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-20%" width="160%" height="150%">
+      <feDropShadow dx="0" dy="44" stdDeviation="44" flood-color="#2d276c" flood-opacity="0.24"/>
+    </filter>
+    <clipPath id="cupClip">
+      <path d="M254 188C279 102 621 102 646 188L598 930C591 1038 309 1038 302 930L254 188Z"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="450" cy="1036" rx="226" ry="52" fill="#30286e" opacity="0.18"/>
+  <g filter="url(#shadow)">
+    <path d="M254 188C279 102 621 102 646 188L598 930C591 1038 309 1038 302 930L254 188Z" fill="#ffffff" opacity="0.2"/>
+    <g clip-path="url(#cupClip)">
+      <path d="M284 368C372 332 492 391 604 350L584 905C578 984 322 984 316 905L284 368Z" fill="url(#drink)" opacity="0.92"/>
+      <path d="M282 506C369 452 460 533 553 481C578 467 598 462 618 470L608 626C522 580 463 641 374 610C334 596 304 585 292 600L282 506Z" fill="#ffffff" opacity="0.22"/>
+      <rect x="404" y="462" width="80" height="80" rx="18" fill="#ffffff" opacity="0.16" transform="rotate(-10 444 502)"/>
+      <rect x="500" y="552" width="74" height="74" rx="17" fill="#ffffff" opacity="0.13" transform="rotate(13 537 589)"/>
+      <circle cx="410" cy="430" r="9" fill="#fff" opacity="0.65"/>
+      <circle cx="510" cy="362" r="7" fill="#fff" opacity="0.5"/>
+      <circle cx="560" cy="585" r="10" fill="#fff" opacity="0.38"/>
+      <circle cx="388" cy="730" r="8" fill="#fff" opacity="0.5"/>
+    </g>
+    <ellipse cx="450" cy="184" rx="204" ry="72" fill="#ffffff" opacity="0.72"/>
+    <ellipse cx="450" cy="184" rx="164" ry="48" fill="#efe9ff" opacity="0.36"/>
+    <path d="M254 188C279 102 621 102 646 188L598 930C591 1038 309 1038 302 930L254 188Z" fill="none" stroke="url(#glassEdge)" stroke-width="18"/>
+    <path d="M640 206C682 174 730 187 746 225C768 278 720 326 668 302" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" opacity="0.5"/>
+    <path d="M614 142C648 104 716 93 756 131C698 132 663 160 645 205" fill="#fff176" opacity="0.88"/>
+    <path d="M628 153C660 130 697 123 731 133" fill="none" stroke="#ffffff" stroke-width="7" opacity="0.7"/>
+  </g>
+</svg>
