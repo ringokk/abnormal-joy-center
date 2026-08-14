@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酒精灵感异常中心</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="glow glow-a"></span>
+      <span class="glow glow-b"></span>
+      <span class="glow glow-c"></span>
+      <span class="gridline"></span>
+    </div>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="播放背景音乐 Loretta" aria-pressed="false" title="Loretta">
+      <span class="music-disc" aria-hidden="true">
+        <span class="music-disc-core"></span>
+      </span>
+      <span class="music-wave" aria-hidden="true"></span>
+    </button>
+    <audio id="bgMusic" src="assets/loretta.mp3" preload="auto" autoplay playsinline loop></audio>
+
+    <main class="app" id="app">
+      <div class="global-dock" id="globalDock" aria-label="全局玩法导航">
+        <button class="dock-btn" data-jump="center" type="button">中心</button>
+        <button class="dock-btn" data-jump="draw" type="button">抽签</button>
+        <button class="dock-btn" data-jump="quiz" type="button">检测</button>
+        <button class="dock-btn" data-jump="menu" type="button">酒单</button>
+        <button class="dock-btn" data-jump="lab" type="button">实验</button>
+      </div>
+      <p class="sr-only" id="statusLive" aria-live="polite"></p>
+      <section class="screen hero-screen is-active" id="heroScreen">
+        <nav class="nav">
+          <button class="nav-chip is-active" data-jump="center" type="button">CENTER</button>
+          <button class="nav-chip" data-jump="menu" type="button">ARCHIVE</button>
+          <button class="nav-chip" data-jump="lab" type="button">LAB</button>
+          <span class="nav-brand">ABNORMAL JOY</span>
+          <button class="nav-chip ghost" type="button">READY</button>
+        </nav>
+
+        <div class="hero-panel">
+          <p class="micro">SYSTEM SAMPLE / 2026</p>
+          <div class="hero-title-wrap">
+            <h1 class="hero-title">酒精灵感<br />异常中心</h1>
+          </div>
+          <p class="hero-copy">系统将为你分配一杯可疑快乐。请在清醒边缘，选择一种今晚的打开方式。</p>
+          <button class="cta hero-cta" id="enterBtn" type="button">点击进入中心</button>
+
+          <div class="hero-object" aria-hidden="true">
+            <div class="planet-scene">
+              <span class="planet-orbit orbit-wide"></span>
+              <span class="planet-orbit orbit-tight"></span>
+              <span class="joy-planet"></span>
+              <span class="planet-chip chip-star"></span>
+              <span class="planet-chip chip-ice"></span>
+              <span class="planet-chip chip-sour"></span>
+              <span class="planet-dot dot-one"></span>
+              <span class="planet-dot dot-two"></span>
+              <span class="planet-dot dot-three"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen center-screen" id="centerScreen">
+        <nav class="nav">
+          <button class="nav-chip" id="backHomeBtn" type="button">HOME</button>
+          <span class="nav-brand">ABNORMAL JOY</span>
+          <button class="nav-chip ghost" type="button">四个入口</button>
+        </nav>
+
+        <div class="mode-stage">
+          <div class="mode-copy">
+            <p class="micro" id="modeKicker">SAMPLE 01</p>
+            <h2 id="modeTitle">抽取今日酒精灵感</h2>
+            <p id="modeSubtitle">命运已摇匀，请小心开杯。</p>
+            <div class="mode-actions">
+              <button class="round-control" id="prevMode" type="button" aria-label="上一个">←</button>
+              <button class="cta" id="openModeBtn" type="button">进入此入口</button>
+              <button class="round-control" id="nextMode" type="button" aria-label="下一个">→</button>
+            </div>
+          </div>
+          <div class="mode-orbit" id="modeOrbit" aria-label="玩法入口"></div>
+        </div>
+      </section>
+
+      <section class="screen module-screen" id="drawScreen">
+        <header class="module-head">
+          <button class="nav-chip" data-go-center type="button">返回中心</button>
+          <p class="micro">RANDOM FILE</p>
+          <h2>抽取今日酒精灵感</h2>
+        </header>
+        <div class="draw-stage">
+          <div class="draw-object">
+            <img class="asset-can draw-asset-can" id="drawCan" src="assets/drink-lemon.svg" alt="" />
+            <div class="reel" id="charmReel">等待开杯</div>
+            <button class="cta" id="drawBtn" type="button">开启今日灵感</button>
+          </div>
+          <aside class="play-guide">
+            <span class="glass-badge">完全随机</span>
+            <h3>开杯后，档案卡会弹出。</h3>
+            <p>结果会包含抽中的异常小物、推荐酒饮、配料、约度数和一句今日备注。</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="screen module-screen" id="quizScreen">
+        <header class="module-head">
+          <button class="nav-chip" data-go-center type="button">返回中心</button>
+          <p class="micro">MOOD SCAN</p>
+          <h2>检测今晚微醺指数</h2>
+        </header>
+        <div class="quiz-stage">
+          <form class="quiz-form" id="quizForm">
+            <div id="quizQuestions"></div>
+            <button class="cta" type="submit">提交检测样本</button>
+            <p class="form-warning" id="quizWarning" aria-live="polite"></p>
+          </form>
+          <aside class="scan-orb" aria-hidden="true">
+            <span>SCAN</span>
+            <b>0%</b>
+          </aside>
+        </div>
+      </section>
+
+      <section class="screen module-screen" id="menuScreen">
+        <header class="module-head">
+          <button class="nav-chip" data-go-center type="button">返回中心</button>
+          <p class="micro">DRINK ARCHIVE</p>
+          <h2>浏览异常酒单</h2>
+        </header>
+        <div class="category-tabs" id="categoryTabs"></div>
+        <div class="drink-shelf" id="drinkShelf" aria-label="横向滑动酒架"></div>
+      </section>
+
+      <section class="screen module-screen" id="labScreen">
+        <header class="module-head">
+          <button class="nav-chip" data-go-center type="button">返回中心</button>
+          <p class="micro">LABEL LAB</p>
+          <h2>进入快乐实验</h2>
+        </header>
+        <div class="lab-stage">
+          <div class="lab-preview">
+            <div class="custom-can asset-custom-can" id="customCan">
+              <img class="custom-can-base" src="assets/drink-lime.svg" alt="" />
+              <div class="lab-liquid-preview" id="labLiquidPreview" aria-hidden="true">
+                <span class="liquid-wave wave-one"></span>
+                <span class="liquid-wave wave-two"></span>
+                <span class="lab-ice lab-ice-a"></span>
+                <span class="lab-ice lab-ice-b"></span>
+                <span class="lab-bubble lab-bubble-a"></span>
+                <span class="lab-bubble lab-bubble-b"></span>
+              </div>
+              <span class="can-lip"></span>
+              <span class="can-shine"></span>
+              <span class="can-word" id="customFlavor">未命名</span>
+              <span class="can-tag">CUSTOM SAMPLE</span>
+              <span class="can-vol">EXPERIMENT</span>
+              <div class="placed-stickers" id="placedStickers"></div>
+            </div>
+            <div class="lab-pills" id="shareTags" aria-live="polite">请选择四类贴纸</div>
+            <article class="lab-recipe-card" id="labRecipeCard" aria-live="polite">
+              <p class="micro">LIVE SAMPLE</p>
+              <h3 id="labPreviewName">未命名微醺样本</h3>
+              <div class="lab-recipe-grid">
+                <div>
+                  <span class="field-label">完成度</span>
+                  <strong id="labPreviewProgress">0 / 4</strong>
+                </div>
+                <div>
+                  <span class="field-label">约度数</span>
+                  <strong id="labPreviewAbv">待贴纸决定</strong>
+                </div>
+                <div class="wide">
+                  <span class="field-label">风味结构</span>
+                  <strong id="labPreviewMeta">请选择风味、口感、异常物件和夜晚状态</strong>
+                </div>
+              </div>
+              <p id="labPreviewNote">贴纸会实时合成这杯酒的名字、颜色、度数和档案备注。</p>
+            </article>
+            <div class="lab-actions">
+              <button class="cta" id="makeLabBtn" type="button">生成实验档案</button>
+              <button class="nav-chip" id="resetLabBtn" type="button">重新贴杯</button>
+            </div>
+          </div>
+          <div class="sticker-console">
+            <div class="sticker-tabs" id="stickerTabs"></div>
+            <div class="sticker-options" id="stickerOptions"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="resultModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-scrim" data-close-modal></div>
+      <article class="archive-card" id="archiveCard">
+        <button class="modal-close" data-close-modal type="button" aria-label="关闭结果">×</button>
+        <p class="micro" id="modalKicker">ABNORMAL FILE</p>
+        <h2 id="modalTitle">档案生成中</h2>
+        <p class="archive-subtitle" id="modalSubtitle">系统正在整理快乐样本。</p>
+        <div class="archive-grid">
+          <div>
+            <span class="field-label">推荐酒饮</span>
+            <strong id="modalDrink">--</strong>
+          </div>
+          <div>
+            <span class="field-label">约度数</span>
+            <strong id="modalAbv">--</strong>
+          </div>
+          <div class="wide">
+            <span class="field-label">配料</span>
+            <strong id="modalMeta">--</strong>
+          </div>
+        </div>
+        <p class="archive-note" id="modalNote">--</p>
+        <div class="archive-actions">
+          <button class="nav-chip" data-close-modal type="button">收起档案</button>
+          <button class="cta" id="modalAgainBtn" type="button">再来一次</button>
+        </div>
+      </article>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

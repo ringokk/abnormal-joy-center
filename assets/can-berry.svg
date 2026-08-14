@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="可疑快乐莓果气泡酒易拉罐">
+  <defs>
+    <linearGradient id="berryBody" x1="210" y1="130" x2="720" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe1ef"/>
+      <stop offset="0.3" stop-color="#ff9bc9"/>
+      <stop offset="0.64" stop-color="#b998ff"/>
+      <stop offset="1" stop-color="#6f66d7"/>
+    </linearGradient>
+    <linearGradient id="berrySide" x1="220" y1="0" x2="690" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.88"/>
+      <stop offset="0.14" stop-color="#ffffff" stop-opacity="0.38"/>
+      <stop offset="0.48" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#281d68" stop-opacity="0.34"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="232" y1="95" x2="668" y2="178" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.48" stop-color="#c7bfd6"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="canShadow" x="-35%" y="-25%" width="170%" height="160%">
+      <feDropShadow dx="0" dy="38" stdDeviation="42" flood-color="#282160" flood-opacity="0.32"/>
+    </filter>
+    <clipPath id="canClip">
+      <path d="M255 164C255 118 645 118 645 164C670 394 684 789 661 1018C655 1080 245 1080 239 1018C216 789 230 394 255 164Z"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="450" cy="1070" rx="236" ry="48" fill="#31286e" opacity="0.16"/>
+  <g filter="url(#canShadow)">
+    <path d="M255 164C255 118 645 118 645 164C670 394 684 789 661 1018C655 1080 245 1080 239 1018C216 789 230 394 255 164Z" fill="url(#berryBody)"/>
+    <g clip-path="url(#canClip)">
+      <rect x="214" y="112" width="500" height="980" fill="url(#berrySide)"/>
+      <path d="M286 224C314 204 351 216 353 254V876C353 925 309 951 283 916C298 686 298 454 286 224Z" fill="#fff" opacity="0.5"/>
+      <path d="M236 636C326 590 386 671 470 620C543 576 605 552 666 592V742C579 685 514 750 431 734C348 719 292 670 236 711V636Z" fill="#ffffff" opacity="0.18"/>
+      <rect x="302" y="350" width="298" height="390" rx="64" fill="#ffffff" opacity="0.32"/>
+      <rect x="330" y="382" width="242" height="328" rx="48" fill="#fff" opacity="0.24"/>
+      <circle cx="350" cy="298" r="8" fill="#fff" opacity="0.45"/>
+      <circle cx="586" cy="334" r="11" fill="#fff" opacity="0.28"/>
+      <circle cx="330" cy="790" r="7" fill="#fff" opacity="0.45"/>
+      <text x="450" y="505" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="900" font-size="76" fill="#ffffff">可疑快乐</text>
+      <text x="450" y="573" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="800" font-size="31" fill="#ffffff" opacity="0.86">莓果心情</text>
+      <text x="450" y="633" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="25" letter-spacing="5" fill="#ffffff">BERRY MOOD</text>
+      <rect x="344" y="792" width="212" height="56" rx="28" fill="#ffffff" opacity="0.24"/>
+      <text x="450" y="829" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="23" fill="#ffffff">330ML / 5.5%</text>
+    </g>
+    <ellipse cx="450" cy="154" rx="202" ry="53" fill="#8f83b5" opacity="0.2"/>
+    <ellipse cx="450" cy="137" rx="226" ry="65" fill="url(#metal)"/>
+    <ellipse cx="450" cy="132" rx="176" ry="40" fill="#ffffff" opacity="0.32"/>
+    <path d="M414 122C440 103 501 110 516 129C502 150 446 155 412 140C399 134 402 128 414 122Z" fill="#ffffff" opacity="0.4"/>
+    <path d="M438 124C465 119 490 124 500 136C480 145 452 146 431 139C424 134 428 127 438 124Z" fill="#6f6988" opacity="0.18"/>
+    <ellipse cx="450" cy="1060" rx="198" ry="36" fill="#4f3d93" opacity="0.14"/>
+  </g>
+</svg>
